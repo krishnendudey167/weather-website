@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+  </head>
+  <body>
+    <div class="box">
+        <form action="/search" method="POST">
+            <input type="text" id="city" name="city" placeholder="Enter City Name"/>
+            <button type="submit">Search</button>
+        </form>
+        <div class="display-content">
+            <% if (typeof content === 'string') { %>
+                <%= content %>
+            <% } else { %>  
+                <span><%= content.city %></span><br>
+                <span><%= content.weather.main %></span><br>
+                <span><%= content.weather.description %></span><br>
+                <span id="temperature">Temp: <%= content.temp %><sup>o</sup></span><br>
+                <span>Min: <%= content.minimumTemp %><sup>o</sup></span><br>
+                <span>Max: <%= content.maximumTemp %><sup>o</sup></span>
+            <% } %>
+        </div>
+        <button id="clear" onclick="window.location.href='/'">Clear</button>
+    </div>
+  </body>
+</html>
