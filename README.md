@@ -55,15 +55,15 @@ Weather App is a responsive, dynamic web application built using **Node.js**, **
 ```
 weather-app/
 ├── public/
-│   ├── styles/
-│   │   └── main.css
 │   ├── images/
-│   └── pattern.svg
+│   │   └── pattern.svg
+│   └── styles/
+│       └── main.css
 ├── views/
 │   └── index.ejs
 ├── .env
 ├── .gitignore
-├── server.js
+├── index.js
 ├── package.json
 └── README.md
 ```
