@@ -7,36 +7,6 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
   </head>
   <body>
-    <!-- Animated Sun SVG -->
-    <!-- <img src="images/sun-svgrepo-com.svg" alt="Sun" class="svg-sun animated-sun" /> -->
-
-    <!-- Animated Cloud SVGs -->
-    <!-- <img src="images/clouds-weather-svgrepo-com.svg" alt="Cloud" class="svg-cloud cloud-2"/>
-    <img src="images/clouds-cloud-svgrepo-com.svg" alt="Cloud" class="svg-cloud cloud-1"/> -->
-
-    <!-- <div class="box">
-      <p class="heading">Weather App</p>
-      <form action="/search" method="POST" class="search-form">
-        <input type="text" id="city" name="city" placeholder="Enter City Name"/>
-        <button type="submit">Search</button>
-      </form>
-
-      <div class="display-content">
-        <% if (typeof content === 'string') { %> <%= content %> <% } else { %>
-        <h2><%= content.city %></h2>
-        <div class="weather-main">
-          <%= content.weather.main %> - <%= content.weather.description %>
-        </div>
-        <div id="temperature">Temp: <%= content.temp %><sup>°</sup>C</div>
-        <div>Min: <%= content.minimumTemp %><sup>°</sup>C</div>
-        <div>Max: <%= content.maximumTemp %><sup>°</sup>C</div>
-        <% } %>
-      </div>
-
-      <button id="clear" onclick="window.location.href='/'">Clear</button>
-
-
-    </div> -->
     <main>
       <section class="card">
         <canvas id="particles"></canvas>
@@ -44,20 +14,20 @@
         <article class="card-content card-glow tilt float-b" id="cardText">
           <h1 class="card-title rainbow">Weather App</h1>
           <form action="/search" method="POST" class="search-form">
-            <input type="text" id="city" name="city" placeholder="Enter City Name"/>
+            <input type="text" id="city" name="city" placeholder="Enter City Name" />
             <button class="card-btn" type="submit">Search</button>
           </form>
           <div class="card-description">
             <% if (typeof content === 'string') { %> 
-                <%= content %> 
+              <%= content %> 
             <% } else { %>
-                <h2><%= content.city %></h2>
-                <div class="weather-main">
-                    <%= content.weather.main %> - <%= content.weather.description %>
-                </div>
-                <div id="temperature">Temp: <%= content.temp %><sup>°</sup>C</div>
-                <div>Min: <%= content.minimumTemp %><sup>°</sup>C</div>
-                <div>Max: <%= content.maximumTemp %><sup>°</sup>C</div>
+              <h2><%= content.city %></h2>
+              <div class="weather-main">
+                <%= content.weather.main %> - <%= content.weather.description %>
+              </div>
+              <div id="temperature">Temp: <%= content.temp %><sup>°</sup>C</div>
+              <div>Min: <%= content.minimumTemp %><sup>°</sup>C</div>
+              <div>Max: <%= content.maximumTemp %><sup>°</sup>C</div>
             <% } %>
           </div>
           <button class="card-btn" onclick="window.location.href='/'">Clear</button>
